@@ -1,7 +1,7 @@
 # code_turtle
 홈페이지 주소: https://als-ruuud.github.io/code_turtle/
 
-index.html | 홈페이지 메인 구성;
-style.css | 동작 기능;
-script.js | 필요한 자료;
-assets/ | 재료, 소재
+- index.html : 웹페이지 구조 (제목, 버튼, 레이아웃)
+- style.css : 디자인 (색상, 글꼴, 배치)
+- script.js : 동작 기능 로직
+- assets/ : 이미지, 아이콘 등 리소스
