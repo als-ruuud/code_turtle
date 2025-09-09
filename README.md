@@ -10,4 +10,4 @@
 
 
 ## 🌍 GitHub Pages
-👉 [프로젝트 페이지 바로가기](https://github.com/als-ruuud/code_turtle.git)
+👉 [프로젝트 페이지 바로가기](https://als-ruuud.github.io/code_turtle/)
