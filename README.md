@@ -5,8 +5,8 @@
 
 ## 📂 Project File
 - index.html : 웹페이지 기본 구조
-- style.css : 디자인
 - script.js : 데이터 시각화 / 인터랙션
+- style.css : 디자인
 
 
 ## 🌍 Home Pages
