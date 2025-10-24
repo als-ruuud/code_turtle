@@ -16,13 +16,12 @@
       color: #001F54;
     }
 
-    /* 상단 전체 레이아웃 */
+    /* 제목 영역 */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 120px;
+      text-align: center;
+      padding: 40px 0 10px 0;
       border-bottom: 1px solid #ddd;
+      position: relative;
     }
 
     header h1 {
@@ -31,16 +30,17 @@
       margin: 0;
     }
 
-    /* 로그인 박스 */
+    /* 로그인 박스 (오른쪽 위에 띄워놓기) */
     .login-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      position: absolute;
+      top: 30px;
+      right: 80px;
       background-color: #ffffff;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      padding: 30px 35px;
-      width: 270px;
+      padding: 25px 30px;
+      width: 260px;
+      text-align: center;
     }
 
     .login-box input {
@@ -75,14 +75,15 @@
     .login-box button:hover {
       background-color: #4696f0;
     }
+
   </style>
 </head>
 <body>
 
-  <!-- 상단: 제목 + 로그인 박스 -->
   <header>
     <h1>ENERBRIDGE</h1>
 
+    <!-- 로그인 박스 (오른쪽 위) -->
     <div class="login-box">
       <input type="text" placeholder="아이디 입력">
       <input type="password" placeholder="비밀번호 입력(6자 이상)">
