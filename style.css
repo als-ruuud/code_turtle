@@ -16,3 +16,11 @@
   color: #7a7a7a; /* 아이콘 색 (회색 계열로 투명한 느낌) */
   opacity: 0.6;   /* 반투명 효과 */
 }
+
+.square-large {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #dce6f9;
+  border-radius: 8px;
+  height: 130px;
+}
