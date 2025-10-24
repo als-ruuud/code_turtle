@@ -1,9 +1,49 @@
-.square-large {
-  grid-column: span 2;
-  grid-row: span 2;
-  background-color: #dce6f9;
-  border-radius: 8px;
-  height: 130px;
+/* 🌈 전체 기본 설정 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ 헤더 */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #464C53;
+  margin: 0;
+}
+
+/* ✅ 상단 메뉴 */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ✅ 공지바 */
+.top-bar {
+  background-color: #0c2d6b;
+  color: white;
+  font-size: 14px;
+  padding: 8px 40px;
 }
 
 /* ✅ 검색창 섹션 */
@@ -25,7 +65,7 @@
   align-items: center;
 }
 
-/* ✅ 돋보기 아이콘 위치 + 투명도 */
+/* ✅ 돋보기 아이콘 스타일 */
 .search-box svg {
   position: absolute;
   left: 14px;
@@ -33,4 +73,129 @@
   height: 18px;
   color: #7a7a7a;
   opacity: 0.25;
+}
+
+/* ✅ 검색 input */
+.search-section input {
+  width: 600px;
+  padding: 12px 16px 12px 40px;
+  border: 2px solid #0056d6;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* ✅ 메인 레이아웃 */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 40px;
+}
+
+/* ✅ 카드 박스 */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* ✅ 카드 제목 */
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* ✅ 그리드 박스 */
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ✅ 작은 사각형 */
+.square {
+  background-color: #eef3fb;
+  border-radius: 8px;
+  height: 60px;
+}
+
+/* ✅ 큰 사각형 */
+.square-large {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #dce6f9;
+  border-radius: 8px;
+  height: 130px;
+}
+
+/* ✅ 로그인 입력창 */
+.login-input {
+  width: 90%;
+  padding: 15px 18px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  border-color: #0056d6;
+}
+
+/* ✅ 버튼 영역 (회원가입 | 로그인) */
+.login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+  border-top: 1px solid #ccc;
+  padding-top: 14px;
+}
+
+/* ✅ 회원가입 / 로그인 버튼 */
+.button-join,
+.button-login {
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.button-join:hover,
+.button-login:hover {
+  background-color: #1a6eff;
+}
+
+/* ✅ 커뮤니티 박스 */
+.community {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.community h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* ✅ 푸터 */
+footer {
+  background-color: #f1f3f6;
+  padding: 30px;
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
 }
