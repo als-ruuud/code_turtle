@@ -1,5 +1,18 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #ffffff;
+.search-section {
+  position: relative;
+  background-color: white;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #7a7a7a; /* 아이콘 색 (회색 계열로 투명한 느낌) */
+  opacity: 0.6;   /* 반투명 효과 */
 }
