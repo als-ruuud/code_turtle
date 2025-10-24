@@ -14,6 +14,8 @@
       margin: 0;
       background-color: #ffffff;
       color: #001F54;
+      height: 100vh;
+      position: relative;
     }
 
     /* 상단 제목 영역 */
@@ -32,10 +34,10 @@
 
     /* 로그인 박스 */
     .login-box {
-      position: relative;
-      top: 30px; /* 제목 아래쪽 위치 */
-      left: 75%; /* ✅ 중앙보다 더 오른쪽으로 이동 */
-      transform: translateX(-50%);
+      position: absolute; /* ✅ 화면 전체 기준으로 이동 */
+      top: 33%; /* 세로 3등분 중 중앙 위치 */
+      left: 70%; /* ✅ 오른쪽으로 이동 */
+      transform: translate(-50%, -50%);
       background-color: #ffffff;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -44,7 +46,7 @@
       text-align: center;
     }
 
-    /* ✅ 입력창 길이 줄여서 버튼 끝이랑 맞춤 */
+    /* ✅ 입력창 길이 조정 (버튼과 맞춤) */
     .login-box input {
       width: 200px;
       padding: 8px;
@@ -92,7 +94,6 @@
     <h1>ENERBRIDGE</h1>
   </header>
 
-  <!-- 제목 아래쪽, 오른쪽으로 이동한 로그인 박스 -->
   <div class="login-box">
     <input type="text" placeholder="아이디 입력">
     <input type="password" placeholder="비밀번호 입력(6자 이상)">
