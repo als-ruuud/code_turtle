@@ -43,3 +43,51 @@
   font-size: 16px;
   outline: none;
 }
+
+/* ✅ 로그인 입력칸 스타일 */
+.login-input {
+  width: 80%;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-input:focus {
+  border-color: #0056d6;
+}
+
+/* ✅ 버튼 영역 */
+.login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 12px;
+}
+
+/* ✅ 회원가입 버튼 (파란색 배경) */
+.button-join {
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ✅ 로그인 버튼 (같은 스타일, 재활용 가능) */
+.button-login {
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
