@@ -89,3 +89,48 @@
 .button-login:hover {
   background-color: #1a6eff;
 }
+
+/* 🔥 기존 것 무시하고 새로 강제 적용 */
+.login-input {
+  width: 95% !important;       /* 가로폭 확실히 늘리기 */
+  padding: 15px 18px !important; /* 세로도 살짝 키움 */
+  margin: 10px 0 !important;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-input:focus {
+  border-color: #0056d6;
+}
+
+/* 버튼 박스 */
+.login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+  border-top: 1px solid #ccc;
+  padding-top: 14px;
+}
+
+/* 회원가입 / 로그인 버튼 완전히 동일하게 */
+.button-join,
+.button-login {
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.button-join:hover,
+.button-login:hover {
+  background-color: #1a6eff;
+}
