@@ -44,14 +44,14 @@
   outline: none;
 }
 
-/* ✅ 로그인 입력칸 스타일 */
+/* ✅ 로그인 입력칸 - 가로 넓히고 세로 높이기 */
 .login-input {
-  width: 80%;
-  padding: 10px 14px;
-  margin: 6px 0;
+  width: 90%;              /* 가로폭 확장 */
+  padding: 14px 16px;      /* 세로폭 약간 증가 */
+  margin: 8px 0;
   border: 1.8px solid #ccc;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 16px;
   outline: none;
   transition: border-color 0.2s;
 }
@@ -60,34 +60,32 @@
   border-color: #0056d6;
 }
 
-/* ✅ 버튼 영역 */
+/* ✅ 버튼 영역 (회원가입 | 로그인) */
 .login-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 14px;
   border-top: 1px solid #ccc;
-  padding-top: 12px;
+  padding-top: 14px;
 }
 
-/* ✅ 회원가입 버튼 (파란색 배경) */
-.button-join {
-  background-color: #0056d6;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-/* ✅ 로그인 버튼 (같은 스타일, 재활용 가능) */
+/* ✅ 회원가입 / 로그인 버튼 공통 스타일 */
+.button-join,
 .button-login {
   background-color: #0056d6;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 26px;      /* 버튼 크기 약간 확대 */
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+/* ✅ hover 효과 추가 (선택사항) */
+.button-join:hover,
+.button-login:hover {
+  background-color: #1a6eff;
 }
