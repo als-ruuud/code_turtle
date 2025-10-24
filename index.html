@@ -4,104 +4,200 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ENERBRIDGE</title>
-
-  <!-- 폰트 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f7f9fc;
       margin: 0;
-      background-color: #ffffff;
-      color: #001F54;
-      height: 100vh;
-      position: relative;
+      padding: 0;
     }
 
-    /* 상단 제목 영역 */
     header {
-      text-align: center;
-      padding: 40px 0 15px 0;
-      border-bottom: 1px solid #ddd;
-      position: relative;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
 
     header h1 {
-      font-size: 38px;
+      font-size: 24px;
       font-weight: 700;
+      color: #0056d6;
       margin: 0;
     }
 
-    /* 로그인 박스 */
-    .login-box {
-      position: absolute; /* ✅ 화면 전체 기준으로 이동 */
-      top: 33%; /* 세로 3등분 중 중앙 위치 */
-      left: 70%; /* ✅ 오른쪽으로 이동 */
-      transform: translate(-50%, -50%);
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      padding: 20px 25px;
-      width: 260px;
-      text-align: center;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
     }
 
-    /* ✅ 입력창 길이 조정 (버튼과 맞춤) */
-    .login-box input {
-      width: 200px;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+    nav li {
+      cursor: pointer;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #0c2d6b;
+      color: white;
       font-size: 14px;
+      padding: 8px 40px;
+    }
+
+    .search-section {
+      background-color: white;
+      padding: 30px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+
+    .search-section input {
+      width: 600px;
+      padding: 12px 16px;
+      border: 2px solid #0056d6;
+      border-radius: 25px;
+      font-size: 16px;
       outline: none;
     }
 
-    .login-box input:focus {
-      border-color: #5CA8FF;
-      box-shadow: 0 0 3px rgba(92, 168, 255, 0.6);
+    .main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 40px;
     }
 
-    /* 버튼 한 줄 배치 */
-    .button-row {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 8px;
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 20px;
     }
 
-    .login-box button {
-      flex: 1;
-      padding: 8px;
-      border: none;
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .grid-box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .square {
+      background-color: #eef3fb;
       border-radius: 8px;
-      background-color: #5CA8FF;
-      color: #fff;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
+      height: 60px;
     }
 
-    .login-box button:hover {
-      background-color: #4696f0;
+    .button-login {
+      background-color: #0056d6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .community {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .community h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #f1f3f6;
+      padding: 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>ENERBRIDGE</h1>
+    <nav>
+      <ul>
+        <li>민원서비스</li>
+        <li>맞춤혜택</li>
+        <li>정책정보</li>
+        <li>고객센터</li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="login-box">
-    <input type="text" placeholder="아이디 입력">
-    <input type="password" placeholder="비밀번호 입력(6자 이상)">
-    <div class="button-row">
-      <button>회원가입</button>
-      <button>로그인</button>
+  <div class="top-bar">
+    공지: 사이트 점검 안내 - 일부 서비스 일시 중단
+  </div>
+
+  <div class="search-section">
+    <input type="text" placeholder="모든 서비스, 한 곳에서 찾아보세요">
+  </div>
+
+  <div class="main">
+    <div>
+      <div class="card">
+        <h2>자주 찾는 서비스</h2>
+        <div class="grid-box">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <h2>지금 봐야 할 혜택</h2>
+        <div class="grid-box">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="text-align:center;">
+        <p>회원가입하고 다양한 서비스를 이용해보세요.</p>
+        <button class="button-login">로그인</button>
+      </div>
+
+      <div class="community" style="margin-top:20px;">
+        <h2>커뮤니티</h2>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li>공지 1</li>
+          <li>공지 2</li>
+          <li>공지 3</li>
+        </ul>
+      </div>
     </div>
   </div>
 
+  <footer>
+    © 2025 ENERBRIDGE. All rights reserved.
+  </footer>
 </body>
 </html>
