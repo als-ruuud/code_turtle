@@ -19,7 +19,7 @@
     /* 제목 영역 */
     header {
       text-align: center;
-      padding: 40px 0 10px 0;
+      padding: 40px 0 15px 0;
       border-bottom: 1px solid #ddd;
       position: relative;
     }
@@ -30,23 +30,21 @@
       margin: 0;
     }
 
-    /* 로그인 박스 (오른쪽 위에 띄워놓기) */
+    /* 로그인 박스 */
     .login-box {
-      position: absolute;
-      top: 30px;
-      right: 80px;
+      margin: 25px auto 0 auto;
       background-color: #ffffff;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      padding: 25px 30px;
-      width: 260px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      padding: 20px 25px;
+      width: 240px;
       text-align: center;
     }
 
     .login-box input {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
+      padding: 8px;
+      margin-bottom: 10px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 14px;
@@ -58,16 +56,22 @@
       box-shadow: 0 0 3px rgba(92, 168, 255, 0.6);
     }
 
+    /* 버튼 한 줄 정렬 */
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
     .login-box button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
+      flex: 1;
+      padding: 8px;
       border: none;
       border-radius: 8px;
       background-color: #5CA8FF;
-      color: #ffffff;
+      color: #fff;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
       cursor: pointer;
       transition: background-color 0.2s ease;
     }
@@ -82,15 +86,17 @@
 
   <header>
     <h1>ENERBRIDGE</h1>
+  </header>
 
-    <!-- 로그인 박스 (오른쪽 위) -->
-    <div class="login-box">
-      <input type="text" placeholder="아이디 입력">
-      <input type="password" placeholder="비밀번호 입력(6자 이상)">
+  <!-- 로그인 박스 (제목 아래쪽 상단) -->
+  <div class="login-box">
+    <input type="text" placeholder="아이디 입력">
+    <input type="password" placeholder="비밀번호 입력(6자 이상)">
+    <div class="button-row">
       <button>회원가입</button>
       <button>로그인</button>
     </div>
-  </header>
+  </div>
 
 </body>
 </html>
