@@ -58,14 +58,13 @@ nav li {
   margin-top: 10px;
 }
 
-/* ✅ 돋보기 아이콘 컨테이너 */
+/* ✅ 돋보기 아이콘 */
 .search-box {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* ✅ 돋보기 아이콘 스타일 */
 .search-box svg {
   position: absolute;
   left: 14px;
@@ -75,7 +74,7 @@ nav li {
   opacity: 0.25;
 }
 
-/* ✅ 검색 input */
+/* ✅ 검색창 input */
 .search-section input {
   width: 600px;
   padding: 12px 16px 12px 40px;
@@ -85,7 +84,7 @@ nav li {
   outline: none;
 }
 
-/* ✅ 메인 레이아웃 */
+/* ✅ 메인 */
 .main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -93,7 +92,7 @@ nav li {
   padding: 40px;
 }
 
-/* ✅ 카드 박스 */
+/* ✅ 카드 */
 .card {
   background-color: white;
   border-radius: 10px;
@@ -101,7 +100,6 @@ nav li {
   padding: 20px;
 }
 
-/* ✅ 카드 제목 */
 .card h2 {
   margin-top: 0;
   font-size: 18px;
@@ -109,21 +107,19 @@ nav li {
   color: #333;
 }
 
-/* ✅ 그리드 박스 */
+/* ✅ 서비스 사각형 */
 .grid-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-/* ✅ 작은 사각형 */
 .square {
   background-color: #eef3fb;
   border-radius: 8px;
   height: 60px;
 }
 
-/* ✅ 큰 사각형 */
 .square-large {
   grid-column: span 2;
   grid-row: span 2;
@@ -149,7 +145,7 @@ nav li {
   border-color: #0056d6;
 }
 
-/* ✅ 버튼 영역 (회원가입 | 로그인) */
+/* ✅ 버튼 묶음 */
 .login-buttons {
   display: flex;
   justify-content: center;
@@ -173,12 +169,13 @@ nav li {
   transition: background-color 0.2s;
 }
 
+/* ✅ hover 효과 */
 .button-join:hover,
 .button-login:hover {
   background-color: #1a6eff;
 }
 
-/* ✅ 커뮤니티 박스 */
+/* ✅ 커뮤니티 */
 .community {
   background-color: white;
   border-radius: 10px;
