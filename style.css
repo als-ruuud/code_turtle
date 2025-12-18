@@ -187,7 +187,6 @@ nav li {
   font-size: 18px;
   margin-bottom: 15px;
 }
-
 /* ✅ 푸터 */
 footer {
   background-color: #f1f3f6;
@@ -195,4 +194,20 @@ footer {
   text-align: center;
   color: #777;
   margin-top: 40px;
+}
+
+/* 설문버튼
+.survey-btn {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 12px 20px;
+  background-color: #2f6fed;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.survey-btn:hover {
+  opacity: 0.9;
 }
