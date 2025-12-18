@@ -4,152 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ENERBRIDGE</title>
-  
-  <!-- ✅ CSS 파일 연결 -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ENERBRIDGE</h1>
-    <nav>
-      <ul>
-        <li>커뮤니티</li>
-        <li>맞춤혜택</li>
-        <li>정책소식</li>
-        <li>마이페이지</li>
+
+<header>
+  <h1>ENERBRIDGE</h1>
+  <nav>
+    <ul>
+      <li>커뮤니티</li>
+      <li>맞춤혜택</li>
+      <li>정책소식</li>
+      <li>마이페이지</li>
+    </ul>
+  </nav>
+</header>
+
+<div class="top-bar">
+  🔔공지: 사이트 점검 안내 - 일부 서비스 일시 중단
+</div>
+
+<div class="main">
+
+  <div>
+    <div class="card">
+      <h2>자주 찾는 서비스</h2>
+      <div class="grid-box">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square-large"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h2>지금 봐야 할 혜택</h2>
+      <div class="grid-box">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card login-box" style="text-align:center;">
+      <form>
+        <input type="text" placeholder="아이디" class="login-input"><br>
+        <input type="password" placeholder="비밀번호(6자 이상)" class="login-input"><br>
+        <div class="login-buttons">
+          <button type="button" class="button-join">회원가입</button>
+          <button type="submit" class="button-login">로그인</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ⭐ 설문 버튼 -->
+    <a href="survey.html" class="survey-btn">에너지 사용 설문</a>
+
+    <div class="community" style="margin-top:20px;">
+      <h2>커뮤니티</h2>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li>공지 1</li>
+        <li>공지 2</li>
+        <li>공지 3</li>
       </ul>
-    </nav>
-  </header>
-
-  <div class="top-bar">
-    🔔공지: 사이트 점검 안내 - 일부 서비스 일시 중단
-  </div>
-
-  <div class="search-section">
-    <span class="search-box">
-       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="8" cy="8" r="6"></circle>
-      <line x1="13" y1="13" x2="17" y2="17"></line>
-    </svg>
-    </span>
-    <input type="text" placeholder="검색어를 입력하세요">
-  </div>
-
-  <div class="main">
-    <div>
-      <div class="card">
-        <h2>자주 찾는 서비스</h2>
-        <div class="grid-box">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square-large"></div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:20px;">
-        <h2>지금 봐야 할 혜택</h2>
-        <div class="grid-box">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="card login-box" style="text-align:center;">
-        <form>
-          <input type="text" placeholder="아이디" class="login-input"><br>
-          <input type="password" placeholder="비밀번호(6자 이상)" class="login-input"><br>
-          <div class="login-buttons">
-            <button type="button" class="button-join">회원가입</button>
-            <button type="submit" class="button-login">로그인</button>
-          </div>
-        </form>
-      </div>
-      <a href="survey.html" class="survey-btn">에너지 설문</a>
-
-      <div class="community" style="margin-top:20px;">
-        <h2>커뮤니티</h2>
-        <ul style="list-style:none; padding:0; margin:0;">
-          <li>공지 1</li>
-          <li>공지 2</li>
-          <li>공지 3</li>
-        </ul>
-      </div>
     </div>
   </div>
 
-  <footer>
-    © 2025 ENERBRIDGE. All rights reserved.
-  </footer>
+</div>
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>에너지 사용 설문</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <h1>에너지 사용 실태 설문</h1>
-  <p>설문 결과를 바탕으로 에너지 부담 수준과 관련 정책 정보를 제공합니다.</p>
-
-  <form id="surveyForm">
-
-    <!-- 1-1 가구원 수 -->
-    <h3>1-1. 가구원 수는 몇 명입니까?</h3>
-    <label><input type="radio" name="family" value="1"> 1명</label><br>
-    <label><input type="radio" name="family" value="2"> 2명</label><br>
-    <label><input type="radio" name="family" value="3"> 3명</label><br>
-    <label><input type="radio" name="family" value="4"> 4명</label><br>
-    <label><input type="radio" name="family" value="5"> 5명 이상</label>
-
-    <!-- 1-2 소득 -->
-    <h3>1-2. 가구의 한 달 평균 소득은 얼마입니까?</h3>
-    <label><input type="radio" name="income" value="1"> 100만원 이하</label><br>
-    <label><input type="radio" name="income" value="2"> 100~200만원</label><br>
-    <label><input type="radio" name="income" value="3"> 201~300만원</label><br>
-    <label><input type="radio" name="income" value="4"> 301~400만원</label><br>
-    <label><input type="radio" name="income" value="5"> 401만원 이상</label>
-
-    <!-- 2-1 전기 -->
-    <h3>2-1. 최근 3개월 평균 전기 사용량 (kWh)</h3>
-    <input type="number" id="electric" placeholder="예: 350">
-
-    <!-- 2-2 가스 -->
-    <h3>2-2. 최근 3개월 평균 도시가스 사용량 (m³)</h3>
-    <input type="number" id="gas" placeholder="예: 40">
-
-    <!-- 4 체감 문항 -->
-    <h3>4. 에너지 비용 관련 경험</h3>
-    <label>
-      <input type="checkbox" id="cutoff">
-      지난 2년간 전기/가스가 끊긴 적이 있다
-    </label><br>
-
-    <label>
-      <input type="checkbox" id="limit">
-      에너지 비용 때문에 냉난방을 제한한 적이 있다
-    </label><br>
-
-    <label>
-      <input type="checkbox" id="reduce">
-      에너지 비용을 지불하기 위해 다른 지출을 줄인 적이 있다
-    </label>
-
-    <br><br>
-    <button type="button" id="submitBtn">결과 확인</button>
-
-  </form>
-
-  <!-- 결과 출력 영역 -->
-  <div id="result"></div>
-
-  <script src="script.js"></script>
+<footer>
+  © 2025 ENERBRIDGE. All rights reserved.
+</footer>
 
 </body>
 </html>
