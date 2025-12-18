@@ -1,1 +1,41 @@
-console.log("자바스크립트 연결 완료!");
+document.getElementById("submitBtn").addEventListener("click", () => {
+  let score = 0;
+
+  // 가구원 수
+  const family = document.querySelector('input[name="family"]:checked');
+  if (family) score += Number(family.value);
+
+  // 소득 (역점수)
+  const income = document.querySelector('input[name="income"]:checked');
+  if (income) score += (6 - Number(income.value));
+
+  // 전기
+  const electric = Number(document.getElementById("electric").value);
+  if (electric < 200) score += 1;
+  else if (electric < 350) score += 2;
+  else if (electric < 500) score += 3;
+  else score += 4;
+
+  // 가스
+  const gas = Number(document.getElementById("gas").value);
+  if (gas < 30) score += 1;
+  else if (gas < 60) score += 2;
+  else if (gas < 100) score += 3;
+  else score += 4;
+
+  // 체감 문항
+  if (document.getElementById("cutoff").checked) score += 2;
+  if (document.getElementById("limit").checked) score += 2;
+  if (document.getElementById("reduce").checked) score += 2;
+
+  // 위험도 판정
+  let level = "";
+  if (score <= 10) level = "낮음";
+  else if (score <= 15) level = "중간";
+  else if (score <= 20) level = "높음";
+  else level = "매우 높음";
+
+  document.getElementById("result").innerHTML =
+    `<h2>에너지 부담 위험도: ${level}</h2>
+     <p>총점: ${score}점</p>`;
+});
