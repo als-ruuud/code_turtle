@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에너지 사용 설문 | ENERBRIDGE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>ENERBRIDGE</h1>
+  </header>
+
+  <main style="max-width:600px; margin:40px auto; padding:20px;">
+    <form id="surveyForm">
+      <h2>에너지 사용 설문</h2>
+      <p>입력하신 정보는 에너지 지원 안내를 위해 사용됩니다.</p>
+
+      <fieldset>
+        <legend>가구원 수</legend>
+        <label><input type="radio" name="family" value="1-2"> 1~2인</label>
+        <label><input type="radio" name="family" value="3-4"> 3~4인</label>
+        <label><input type="radio" name="family" value="5+"> 5인 이상</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>월 소득 구간</legend>
+        <label><input type="radio" name="income" value="low"> 낮음</label>
+        <label><input type="radio" name="income" value="mid"> 중간</label>
+        <label><input type="radio" name="income" value="high"> 높음</label>
+      </fieldset>
+
+      <label>
+        월 전기 사용량 (kWh)
+        <input type="number" name="electric">
+      </label>
+
+      <label>
+        월 도시가스 사용량 (m³)
+        <input type="number" name="gas">
+      </label>
+
+      <fieldset>
+        <legend>체감 문항</legend>
+        <label><input type="radio" name="feel1" value="yes"> 에너지 비용이 부담된다</label>
+        <label><input type="radio" name="feel1" value="no"> 부담되지 않는다</label>
+
+        <label><input type="radio" name="feel2" value="yes"> 사용을 줄이려 노력한다</label>
+        <label><input type="radio" name="feel2" value="no"> 그렇지 않다</label>
+
+        <label><input type="radio" name="feel3" value="yes"> 충분히 사용하지 못한 적이 있다</label>
+        <label><input type="radio" name="feel3" value="no"> 없다</label>
+      </fieldset>
+
+      <button type="submit">제출</button>
+    </form>
+  </main>
+
+  <script>
+    document.querySelector("#surveyForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const data = new FormData(this);
+      for (let [key, value] of data.entries()) {
+        console.log(key, value);
+      }
+    });
+  </script>
+
+</body>
+</html>
