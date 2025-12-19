@@ -1,28 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("submitBtn");
+  const resultDiv = document.getElementById("result");
 
-  alert("JS 연결 성공");
+  if (!btn) {
+    console.log("❌ submitBtn 없음");
+    return;
+  }
 
-  document.getElementById("submitBtn").addEventListener("click", () => {
+  btn.addEventListener("click", () => {
     let score = 0;
 
     const family = document.querySelector('input[name="family"]:checked');
+    if (family) score += Number(family.value);
+
     const income = document.querySelector('input[name="income"]:checked');
+    if (income) score += (6 - Number(income.value));
 
-    if (!family || !income) {
-      alert("가구원 수와 소득을 선택해주세요.");
-      return;
-    }
-
-    score += Number(family.value);
-    score += (6 - Number(income.value));
-
-    const electric = Number(document.getElementById("electric").value);
+    const electric = Number(document.getElementById("electric").value || 0);
     if (electric < 200) score += 1;
     else if (electric < 350) score += 2;
     else if (electric < 500) score += 3;
     else score += 4;
 
-    const gas = Number(document.getElementById("gas").value);
+    const gas = Number(document.getElementById("gas").value || 0);
     if (gas < 30) score += 1;
     else if (gas < 60) score += 2;
     else if (gas < 100) score += 3;
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (score <= 20) level = "높음";
     else level = "매우 높음";
 
-    document.getElementById("result").innerHTML =
-      `<h2>에너지 부담 위험도: ${level}</h2>
-       <p>총점: ${score}점</p>`;
+    resultDiv.innerHTML = `
+      <h2>에너지 부담 위험도: ${level}</h2>
+      <p>총점: ${score}점</p>
+    `;
   });
-
 });
