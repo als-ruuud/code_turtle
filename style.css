@@ -213,3 +213,41 @@ footer {
 .survey-btn:hover {
   background-color: #f0f0f0;
 }
+
+/* ===== 위험도 색상 표시 ===== */
+.level-low {
+  color: #2e7d32;
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.level-mid {
+  color: #ef6c00;
+  background: #fff3e0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.level-high {
+  color: #c62828;
+  background: #fdecea;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.level-very-high {
+  color: #6a1b9a;
+  background: #f3e5f5;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* ===== 정책 안내 박스 ===== */
+.policy-box {
+  margin-top: 15px;
+  padding: 15px;
+  border-left: 5px solid #0056d6;
+  background: #f5f8ff;
+  border-radius: 6px;
+}
