@@ -53,7 +53,4 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     <h2>에너지 부담 위험도: ${level}</h2>
     <p>총점: ${score}점</p>
     <hr>
-    <p><strong>공공기관 안내</strong></p>
-    <p>${message}</p>
-  `;
-});
+    <p><strong>에너지 사용 피드백</strong></p>    <p><strong>ㅍ피</strong></p>  
