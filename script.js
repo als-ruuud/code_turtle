@@ -1,41 +1,39 @@
-document.getElementById("submitBtn").addEventListener("click", () => {
-  let score = 0;
+document.addEventListener("DOMContentLoaded", () => {
 
-  // 가구원 수
-  const family = document.querySelector('input[name="family"]:checked');
-  if (family) score += Number(family.value);
+  document.getElementById("submitBtn").addEventListener("click", () => {
+    let score = 0;
 
-  // 소득 (역점수)
-  const income = document.querySelector('input[name="income"]:checked');
-  if (income) score += (6 - Number(income.value));
+    const family = document.querySelector('input[name="family"]:checked');
+    if (family) score += Number(family.value);
 
-  // 전기
-  const electric = Number(document.getElementById("electric").value);
-  if (electric < 200) score += 1;
-  else if (electric < 350) score += 2;
-  else if (electric < 500) score += 3;
-  else score += 4;
+    const income = document.querySelector('input[name="income"]:checked');
+    if (income) score += (6 - Number(income.value));
 
-  // 가스
-  const gas = Number(document.getElementById("gas").value);
-  if (gas < 30) score += 1;
-  else if (gas < 60) score += 2;
-  else if (gas < 100) score += 3;
-  else score += 4;
+    const electric = Number(document.getElementById("electric").value);
+    if (electric < 200) score += 1;
+    else if (electric < 350) score += 2;
+    else if (electric < 500) score += 3;
+    else score += 4;
 
-  // 체감 문항
-  if (document.getElementById("cutoff").checked) score += 2;
-  if (document.getElementById("limit").checked) score += 2;
-  if (document.getElementById("reduce").checked) score += 2;
+    const gas = Number(document.getElementById("gas").value);
+    if (gas < 30) score += 1;
+    else if (gas < 60) score += 2;
+    else if (gas < 100) score += 3;
+    else score += 4;
 
-  // 위험도 판정
-  let level = "";
-  if (score <= 10) level = "낮음";
-  else if (score <= 15) level = "중간";
-  else if (score <= 20) level = "높음";
-  else level = "매우 높음";
+    if (document.getElementById("cutoff").checked) score += 2;
+    if (document.getElementById("limit").checked) score += 2;
+    if (document.getElementById("reduce").checked) score += 2;
 
-  document.getElementById("result").innerHTML =
-    `<h2>에너지 부담 위험도: ${level}</h2>
-     <p>총점: ${score}점</p>`;
+    let level = "";
+    if (score <= 10) level = "낮음";
+    else if (score <= 15) level = "중간";
+    else if (score <= 20) level = "높음";
+    else level = "매우 높음";
+
+    document.getElementById("result").innerHTML =
+      `<h2>에너지 부담 위험도: ${level}</h2>
+       <p>총점: ${score}점</p>`;
+  });
+
 });
