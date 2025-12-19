@@ -1,9 +1,9 @@
+alert("JS 로드됨");
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("submitBtn");
-  const resultDiv = document.getElementById("result");
-
   if (!btn) {
-    console.log("❌ submitBtn 없음");
+    alert("버튼 못 찾음");
     return;
   }
 
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const income = document.querySelector('input[name="income"]:checked');
     if (income) score += (6 - Number(income.value));
 
-    const electric = Number(document.getElementById("electric").value || 0);
+    const electric = Number(document.getElementById("electric").value);
     if (electric < 200) score += 1;
     else if (electric < 350) score += 2;
     else if (electric < 500) score += 3;
     else score += 4;
 
-    const gas = Number(document.getElementById("gas").value || 0);
+    const gas = Number(document.getElementById("gas").value);
     if (gas < 30) score += 1;
     else if (gas < 60) score += 2;
     else if (gas < 100) score += 3;
@@ -38,9 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (score <= 20) level = "높음";
     else level = "매우 높음";
 
-    resultDiv.innerHTML = `
-      <h2>에너지 부담 위험도: ${level}</h2>
-      <p>총점: ${score}점</p>
-    `;
+    document.getElementById("result").innerHTML =
+      `<h2>에너지 부담 위험도: ${level}</h2>
+       <p>총점: ${score}점</p>`;
   });
 });
